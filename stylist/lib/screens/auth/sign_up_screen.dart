@@ -99,7 +99,7 @@ class SignUpScreen extends StatelessWidget {
                     controller: locationController,
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
-                     
+
                         // hintText: Strings.demoPhoneNumber,
                         contentPadding: const EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 10.0),
@@ -362,8 +362,7 @@ class SignUpScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const SignInScreen()));
+                Get.to(const SignInScreen());
               },
             )
           ],

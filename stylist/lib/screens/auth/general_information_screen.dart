@@ -9,19 +9,10 @@ import 'package:gezabeautyexpertapp/widgets/back_widget.dart';
 import 'package:gezabeautyexpertapp/screens/auth/sign_in_screen.dart';
 import 'package:gezabeautyexpertapp/widgets/bg_image_widget.dart';
 
-class GeneralInformationScreen extends StatefulWidget {
-  // final String emailAddress;
-
-  const GeneralInformationScreen({
+class GeneralInformationScreen extends StatelessWidget {
+  GeneralInformationScreen({
     super.key,
   });
-
-  @override
-  _GeneralInformationScreenState createState() =>
-      _GeneralInformationScreenState();
-}
-
-class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   TextEditingController nameController = TextEditingController();
@@ -29,14 +20,7 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
 
   List<String> specialist = ['Hair Cut', 'Spa', 'Body Message'];
   late String selectedSpecialist;
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-
-    selectedSpecialist = specialist[0].toString();
-  }
+  // selectedSpecialist = specialist[0].toString();
 
   @override
   Widget build(BuildContext context) {
@@ -175,11 +159,7 @@ class _GeneralInformationScreenState extends State<GeneralInformationScreen> {
                           style: CustomStyle.textStyle,
                         ), // Not necessary for Option 1
                         value: selectedSpecialist,
-                        onChanged: (newValue) {
-                          setState(() {
-                            selectedSpecialist = newValue!;
-                          });
-                        },
+                        onChanged: (newValue) {},
                         items: specialist.map((value) {
                           return DropdownMenuItem(
                             value: value,

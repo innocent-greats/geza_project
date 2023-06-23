@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gezabeautyexpertapp/screens/auth/general_information_screen.dart';
+import 'package:gezabeautyexpertapp/screens/auth/sign_in_screen.dart';
 import 'package:gezabeautyexpertapp/screens/auth/sign_up_screen.dart';
 import 'package:gezabeautyexpertapp/screens/dashboard/home_screen.dart';
 import 'package:gezabeautyexpertapp/screens/dashboard_screen.dart';
@@ -24,11 +25,11 @@ getPageRoute() {
         page: () => const DashboardScreen(),
         middlewares: [AuthMiddleware()]),
     GetPage(
-        name: '/register-business',
-        page: () => const GeneralInformationScreen(),
+        name: '/register/business',
+        page: () => GeneralInformationScreen(),
         middlewares: [AuthMiddleware()]),
-    // GetPage(name: '/faqs', page: () => FAQsPage()),
-    GetPage(name: '/auth/login', page: () => SignUpScreen()),
+    GetPage(name: '/auth/login', page: () => const SignInScreen()),
+    GetPage(name: '/register/person', page: () => SignUpScreen()),
   ];
 
   return routes

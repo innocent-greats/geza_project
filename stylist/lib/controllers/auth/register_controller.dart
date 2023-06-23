@@ -58,7 +58,7 @@ class RegisterController extends MainController {
       var res = await client.person.createPerson(person);
       if (res) {
         debugPrint("createPerson res is: $res");
-        Get.toNamed('/register-business');
+        Get.to(GeneralInformationScreen());
       }
     } on Exception catch (e) {
       debugPrint('server had an error');
