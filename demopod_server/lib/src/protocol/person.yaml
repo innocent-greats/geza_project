@@ -1,0 +1,13 @@
+# Name of the class to generate.
+class: Person
+table: person
+fields:
+  firstName: String
+  lastName: String
+  userName: String
+  password: String?
+  phone: String
+  location: String
+indexes:
+  user_name_idx:
+    fields: userName

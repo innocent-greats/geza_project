@@ -1,0 +1,16 @@
+# Name of the class to generate.
+class: Product
+table: product
+fields:
+  businessId: int, parent=business
+  image: String
+  images: List<String>?
+  name: String
+  uniqueName: String
+  category: String
+  price: String?, database
+  rating: List<Rating?>
+  isTrending: String
+indexes:
+  user_name_idx:
+    fields: uniqueName

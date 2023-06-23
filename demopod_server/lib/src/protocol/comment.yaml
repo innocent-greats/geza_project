@@ -1,0 +1,6 @@
+class: Comment
+table: comment
+fields:
+  comment: String
+  dateCreated: DateTime
+  commenterId: int, parent=person

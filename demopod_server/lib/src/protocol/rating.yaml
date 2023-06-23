@@ -1,0 +1,8 @@
+class: Rating
+table: rating
+fields:
+  ratedItemId: String
+  ratedItemCategory: String
+  rating: String
+  dateCreated: DateTime
+  raterId: int, parent=person

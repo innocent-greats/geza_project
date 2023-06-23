@@ -1,0 +1,7 @@
+class: Review
+table: review
+fields:
+  review: String
+  dateCreated: DateTime
+  reviewerId: int, parent=person
+  comments: List<Comment?>

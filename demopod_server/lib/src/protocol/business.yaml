@@ -1,0 +1,16 @@
+class: Business
+table: business
+fields:
+  personId: int, parent=person
+  logo: String
+  name: String
+  category: String
+  address: String
+  ratings: List<Rating?>
+  reviews: List<Review?>
+  isActive: bool
+  dateCreated: DateTime
+  locationCoords: List<LocationCoords?>, api
+indexes:
+  business_name_idx:
+    fields: name

@@ -1,0 +1,5 @@
+class: LocationCoords
+table: location_coords
+fields:
+  latitude: double
+  longitude: double
